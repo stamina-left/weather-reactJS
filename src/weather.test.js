@@ -11,4 +11,7 @@ test("Enter the name of a city shows weather condition.", () => {
 
     const nullSearch = screen.getByText("Enter the name of a city and click the Submit.");
     expect(nullSearch).toBeInTheDocument();
+
+    fireEvent.click(screen.getByTestId('submit-button'));
+    expect(nullSearch).not.toBeInTheDocument();
 });
