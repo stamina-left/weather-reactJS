@@ -8,7 +8,12 @@ export default function Weather() {
         <div>
             City:
             <input type="text" data-testid="city-input" />
+            <button data-testid="submit-button" onClick={() => handleSubmit()}>Submit</button>
         </div>
     );
 
+    function handleSubmit() {
+        setTemperature(29);
+        setWeather("Hot");
+    }
 }
